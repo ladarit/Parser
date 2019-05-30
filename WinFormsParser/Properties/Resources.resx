@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PlenarySessionSaved" xml:space="preserve">
+    <value>Збереження інформації про розклад пленарних засідань</value>
+  </data>
+  <data name="CompareError" xml:space="preserve">
+    <value>Помилка при порівнянні знайдених данних зі збереженими</value>
+  </data>
+  <data name="ArchiveOfFractionsDoesNotExist" xml:space="preserve">
+    <value>Архів фракцій існує починаючи с VI скликання</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="calendar_7_white_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendar 7 white 512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaveError" xml:space="preserve">
+    <value>Помилка при збереженні інформації</value>
+  </data>
+  <data name="LowsAndFilesSaved" xml:space="preserve">
+    <value>Збереження законопроектів і прилеглих документів</value>
+  </data>
+  <data name="ZeroCountWarning" xml:space="preserve">
+    <value>Кількість знайдених записів дорівнює 0</value>
+  </data>
+  <data name="DownloadForCompareError" xml:space="preserve">
+    <value>Помилка при завантаженні файлів, необхідних для порівняння</value>
+  </data>
+  <data name="loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loader.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UpdatedLawNumber" xml:space="preserve">
+    <value>Номер оновленого законопроекту:</value>
+  </data>
+  <data name="UpdatedDocumentName" xml:space="preserve">
+    <value>Назва оновленого супровідного документа:</value>
+  </data>
+  <data name="Ok_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ok_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CompareDownloadedError" xml:space="preserve">
+    <value>Помилка при порівнянні завантажених файлів</value>
+  </data>
+  <data name="Brief_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Brief_512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RetentionMessage" xml:space="preserve">
+    <value> вже відбулося, Ви впевнені, що бажаєте знову шукати нові дані?</value>
+  </data>
+  <data name="group_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\group-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Calendar_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calendar_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NewDeputy" xml:space="preserve">
+    <value>Им'я депутата, інформацію про якого було збережено:</value>
+  </data>
+  <data name="UpdatedCommiteeName" xml:space="preserve">
+    <value>Назва оновленого комітета:</value>
+  </data>
+  <data name="NewDeputyPhoto" xml:space="preserve">
+    <value>Им'я депутата, фото якого було збережено:</value>
+  </data>
+  <data name="RetentionHeader" xml:space="preserve">
+    <value>Попередження</value>
+  </data>
+  <data name="Save_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Save_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SessionsHeader" xml:space="preserve">
+    <value>Робота з пленарними засіданнями</value>
+  </data>
+  <data name="calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Training_white_100px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Training_white_100px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FractionsHeader" xml:space="preserve">
+    <value>Робота з фракціями</value>
+  </data>
+  <data name="sign_up_whit_e_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sign-up whit e 512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DatePickerWarning" xml:space="preserve">
+    <value>Початкова дата не може бути більшою ніж кінцева</value>
+  </data>
+  <data name="StartNotification" xml:space="preserve">
+    <value> Після збереження тут з'явиться звіт</value>
+  </data>
+  <data name="ReportHeader" xml:space="preserve">
+    <value>Робота зі звітом</value>
+  </data>
+  <data name="UpdatedDeputy" xml:space="preserve">
+    <value>Им'я депутата, інформацію про якого було оновлено:</value>
+  </data>
+  <data name="User_Groups_white_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User_Groups_white_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SuccessSave" xml:space="preserve">
+    <value>Збереження завершено!</value>
+  </data>
+  <data name="Roboto_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Roboto_Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DeputySpeechesSaved" xml:space="preserve">
+    <value>Збереження інформації про виступи депутатів</value>
+  </data>
+  <data name="User_Groups_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User Groups1111_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NewDocumentName" xml:space="preserve">
+    <value>Назва нового супровідного документа:</value>
+  </data>
+  <data name="DeputyQueriesSaved" xml:space="preserve">
+    <value>Збереження інформації про запити депутатів</value>
+  </data>
+  <data name="Businessman_white_104px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Businessman_white_104px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeputySaved" xml:space="preserve">
+    <value>Збереження загальної інформації про депутатів</value>
+  </data>
+  <data name="Training_white_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Training_white_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NewFraction" xml:space="preserve">
+    <value>Назва нової фракції:</value>
+  </data>
+  <data name="NewCommiteeName" xml:space="preserve">
+    <value>Назва нового комітета:</value>
+  </data>
+  <data name="Calendar_white_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calendar_white_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_2014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Brief_white_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Brief_white_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Calendar_7_white_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calendar 7 white_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NewLawNumber" xml:space="preserve">
+    <value>Номер нового законопроекта:</value>
+  </data>
+  <data name="Schedule_white_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Schedule_white_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NewVotingRtfDoc" xml:space="preserve">
+    <value>Новий rtf документ поіменного голосування:</value>
+  </data>
+  <data name="FractionsSaved" xml:space="preserve">
+    <value>Збереження інформації про фракції</value>
+  </data>
+  <data name="ParseError" xml:space="preserve">
+    <value>Помилка при пошуку інформації</value>
+  </data>
+  <data name="SearchStopped" xml:space="preserve">
+    <value>Пошук був припинений</value>
+  </data>
+  <data name="man" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\man.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UpdatedFraction" xml:space="preserve">
+    <value>Назва оновленої фракції:</value>
+  </data>
+  <data name="Training_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Training_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UpdatedSessionPlan" xml:space="preserve">
+    <value>Тиждень оновленого засідання:</value>
+  </data>
+  <data name="DeputiesHeader" xml:space="preserve">
+    <value>Робота з депутатами</value>
+  </data>
+  <data name="NewSessionPlan" xml:space="preserve">
+    <value>Тиждень нового засідання:</value>
+  </data>
+  <data name="Circled_Play_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Circled Play_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cancel_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cancel_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Date_Span_white_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Date Span white_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User_white_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User white logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="timeschedule_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\timeschedule-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sign_Up_white_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sign_Up_white_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CommitteesSaved" xml:space="preserve">
+    <value>Збереження інформації про комітети</value>
+  </data>
+  <data name="DeputyVotingSaved" xml:space="preserve">
+    <value>Збереження інформації про голосування депутатів</value>
+  </data>
+  <data name="CommitteesWorkSaved" xml:space="preserve">
+    <value>Збереження інформації про роботу комітетів</value>
+  </data>
+  <data name="CreateLawsTableError" xml:space="preserve">
+    <value>Помилка при створенні зведеної таблиці законопроектів</value>
+  </data>
+  <data name="InvalidSearchLowTextBoxValue" xml:space="preserve">
+    <value>Введить номер закону</value>
+  </data>
+  <data name="LawsHeader" xml:space="preserve">
+    <value>Робота з законопроектами</value>
+  </data>
+  <data name="NothingToSave" xml:space="preserve">
+    <value>Нових чи оновлених документів немає</value>
+  </data>
+  <data name="training" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\training.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="High_Priority_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\High Priority_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Save_icon_black_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Save_icon_black_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UpdatedDeputyPhoto" xml:space="preserve">
+    <value>Им'я депутата, фото якого було оновлено:</value>
+  </data>
+  <data name="DeputyLawActivitySaved" xml:space="preserve">
+    <value>Збереження інформації про законотворчу активність депутатів</value>
+  </data>
+  <data name="CommitteeHeader" xml:space="preserve">
+    <value>Робота з комітетами</value>
+  </data>
+  <data name="CantSaveError" xml:space="preserve">
+    <value>Не вдається зберегти інформацію про помилку</value>
+  </data>
+  <data name="ArchiveOfCommitteeDoesNotExist" xml:space="preserve">
+    <value>Архів комітетів існує починаючи с VI скликання</value>
+  </data>
+  <data name="News1111_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\News1111_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CountWarning" xml:space="preserve">
+    <value>Задайте меньший проміжок часу. Кількість знайдених записів перевищує 100 та дорівнює </value>
+  </data>
+  <data name="Date_span_white_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Date  span white 512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="treangle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\treangle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NewVotingXmlDoc" xml:space="preserve">
+    <value>Новий xml документ поіменного голосування:</value>
+  </data>
+  <data name="VotingRtfDoc" xml:space="preserve">
+    <value>Оновлений rtf документ поіменного голосування:</value>
+  </data>
+  <data name="VotingXmlDoc" xml:space="preserve">
+    <value>Оновлений xml документ поіменного голосування:</value>
+  </data>
+</root>

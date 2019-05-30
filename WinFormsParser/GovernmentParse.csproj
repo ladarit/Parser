@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE9D2C79-EF20-4B4D-AE2C-F888D97A5DF8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GovernmentParse</RootNamespace>
+    <AssemblyName>VruParser</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Downloads_48px.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'SKMU server|AnyCPU'">
+    <OutputPath>bin\SKMU_server\</OutputPath>
+    <DefineConstants>TRACE;SKMU_server_ANYCPU</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_sync|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Debug_sync</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.6.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.6.0\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ConcurrencyVisualizer.Markers">
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\gerzxlcv.pu3\SDK\Managed\4.0\Microsoft.ConcurrencyVisualizer.Markers.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\BaseWorkAreaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BaseWorkAreaControl.Designer.cs">
+      <DependentUpon>BaseWorkAreaControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CommitteesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CommitteesControl.Designer.cs">
+      <DependentUpon>CommitteesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NonFlickerSplitContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SmoothProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SmoothProgressBar.Designer.cs">
+      <DependentUpon>SmoothProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataProviders\ConvocationDeterminant.cs" />
+    <Compile Include="DataProviders\ErrorSaver.cs" />
+    <Compile Include="DataProviders\FilesUpload.cs" />
+    <Compile Include="DataProviders\DictionaryInitializer.cs" />
+    <Compile Include="DataProviders\HtmlProvider.cs" />
+    <Compile Include="DataProviders\MultiMainXmlAndFilesCreator.cs" />
+    <Compile Include="DataProviders\SingleMainXmlAndFilesCreator.cs" />
+    <Compile Include="DataProviders\XmlDownloader.cs" />
+    <Compile Include="Controls\DeputiesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DeputiesControl.Designer.cs">
+      <DependentUpon>DeputiesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\FormattedExceptionCreator.cs" />
+    <Compile Include="Helpers\GarbageCleaner.cs" />
+    <Compile Include="Helpers\ListComparer.cs" />
+    <Compile Include="Helpers\ListDisposer.cs" />
+    <Compile Include="Helpers\FontProvider.cs" />
+    <Compile Include="Helpers\Logger.cs" />
+    <Compile Include="Models\CardId.cs" />
+    <Compile Include="Models\CompareXmlFilesResult.cs" />
+    <Compile Include="Models\ControlNameToNumber.cs" />
+    <Compile Include="Models\ErrorModel.cs" />
+    <Compile Include="Models\SaveFilesErrorMessage.cs" />
+    <Compile Include="Models\XmlRepairResult.cs" />
+    <Compile Include="Models\XmlValidationModel.cs" />
+    <Compile Include="ModernForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModernForm.Designer.cs">
+      <DependentUpon>ModernForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FractionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FractionsControl.Designer.cs">
+      <DependentUpon>FractionsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\FileCreator.cs" />
+    <Compile Include="Helpers\InputValidator.cs" />
+    <Compile Include="Helpers\NetHelper.cs" />
+    <Compile Include="Helpers\ProgressReporter.cs" />
+    <Compile Include="Helpers\RomanArabicNumerals.cs" />
+    <Compile Include="Helpers\StringHandler.cs" />
+    <Compile Include="DataProviders\ApiHandler.cs" />
+    <Compile Include="Controls\LawsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LawsControl.Designer.cs">
+      <DependentUpon>LawsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ResourceReader.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\CollectionBeforeCompare.cs" />
+    <Compile Include="Models\CollectionAfterCompare.cs" />
+    <Compile Include="Models\DownloadResult.cs" />
+    <Compile Include="Models\FilesToSave.cs" />
+    <Compile Include="Models\Page.cs" />
+    <Compile Include="Models\ParseResult.cs" />
+    <Compile Include="Models\RecordOptions.cs" />
+    <Compile Include="Models\ResponceFromApi.cs" />
+    <Compile Include="Models\SavedFiles.cs" />
+    <Compile Include="Models\SavedFileInfo.cs" />
+    <Compile Include="Models\Record.cs" />
+    <Compile Include="Models\ResponceFromUrl.cs" />
+    <Compile Include="Models\FileModel.cs" />
+    <Compile Include="Models\TableInfo.cs" />
+    <Compile Include="Models\TableRow.cs" />
+    <Compile Include="Models\UrlsCollection.cs" />
+    <Compile Include="Parsers\DeputyLawActivityPageParser.cs" />
+    <Compile Include="Parsers\DeputyQueriesPageParser.cs" />
+    <Compile Include="Parsers\DeputySpeechesPageParser.cs" />
+    <Compile Include="Parsers\DeputyVotePageParser.cs" />
+    <Compile Include="Controls\PlanarySessionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PlanarySessionsControl.Designer.cs">
+      <DependentUpon>PlanarySessionsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Parsers\CommitteePageParser.cs" />
+    <Compile Include="Controls\ReportControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportControl.Designer.cs">
+      <DependentUpon>ReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Converter.cs" />
+    <Compile Include="Parsers\DeputyPageParser.cs" />
+    <Compile Include="DataProviders\FilesCompare.cs" />
+    <Compile Include="Parsers\FractionPageParser.cs" />
+    <Compile Include="Services\HashCalculator.cs" />
+    <Compile Include="DataProviders\FilesProvider.cs" />
+    <Compile Include="Services\IniFiles.cs" />
+    <Compile Include="Services\IniReader.cs" />
+    <Compile Include="Parsers\LowsPageParser.cs" />
+    <Compile Include="Parsers\TableDataParser.cs" />
+    <Compile Include="Parsers\PageParser.cs" />
+    <Compile Include="Parsers\PlanarySessionPageParser.cs" />
+    <Compile Include="Parsers\PlanarySessionsDatesParser.cs" />
+    <Compile Include="Services\LawsTableCreator.cs" />
+    <Compile Include="Services\ReportCreator.cs" />
+    <Compile Include="DataProviders\TransitionalFilesProvider.cs" />
+    <Compile Include="Services\UrlHandler.cs" />
+    <Compile Include="Services\XmlComparer.cs" />
+    <Compile Include="Services\XmlRepairer.cs" />
+    <Compile Include="Services\XmlValidator.cs" />
+    <EmbeddedResource Include="Controls\BaseWorkAreaControl.resx">
+      <DependentUpon>BaseWorkAreaControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CommitteesControl.resx">
+      <DependentUpon>CommitteesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DeputiesControl.resx">
+      <DependentUpon>DeputiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SmoothProgressBar.resx">
+      <DependentUpon>SmoothProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModernForm.resx">
+      <DependentUpon>ModernForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FractionsControl.resx">
+      <DependentUpon>FractionsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LawsControl.resx">
+      <DependentUpon>LawsControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PlanarySessionsControl.resx">
+      <DependentUpon>PlanarySessionsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportControl.resx">
+      <DependentUpon>ReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Roboto_Regular.ttf" />
+    <None Include="VRU_log4net.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_Groups_white_100px.png" />
+    <None Include="Resources\Training_white_100px1.png" />
+    <None Include="Resources\Training_white_100px.png" />
+    <None Include="Resources\Schedule_white_96px.png" />
+    <None Include="Resources\loader.gif" />
+    <None Include="Resources\Circled Play_48px.png" />
+    <None Include="Resources\Cancel_48px.png" />
+    <None Include="Resources\Ok_48px.png" />
+    <None Include="Resources\success.png.bmp" />
+    <None Include="Resources\High Priority_48px.png" />
+    <None Include="Resources\News1111_100px.png" />
+    <None Include="Resources\Calendar_25px.png" />
+    <None Include="Resources\User white logo.png" />
+    <None Include="Resources\User Groups1111_25px.png" />
+    <None Include="Resources\Save_48px.png" />
+    <None Include="Resources\logo_2014.png" />
+    <None Include="Resources\Save_icon_black_48px.png" />
+    <None Include="Resources\Save vlack_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Training_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brief_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar 7 white 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Date  span white 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-up whit e 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timeschedule-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\training.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Downloads_48px.ico" />
+    <None Include="Resources\treangle.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(ProjectDir)\VRU_log4net.config $(ProjectDir)$(OutDir)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
